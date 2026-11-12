@@ -28,5 +28,8 @@ const movieTitles = [
       movieList.append(item);
     });
   }
+  addMovie.addEventListener('click', () => {
+    
+  })
 
   renderMovies();
