@@ -28,12 +28,21 @@ function renderMovies() {
         const title = document.createElement('span');
         title.textContent = movieTitle;
 
-        item.append(poster, title);
-        movieList.append(item);
-    });
-}
-renderMovies();
+        const delet = document.createElement('button');
+        delet.textContent = "Удалить";
 
+        item.append(poster, title, delet);
+        movieList.append(item);
+
+        delet.addEventListener('click', () => {
+            movieTitles.splice(index, 1)
+            moviePosters.splice(index, 1)
+            renderMovies();
+        })
+    });
+
+}
+renderMovies()
 
 addMovie.addEventListener('click', () => {
     const Name = movieName.value.trim()
@@ -43,6 +52,7 @@ addMovie.addEventListener('click', () => {
     } else {
         movieTitles.push(Name);
         moviePosters.push(Poster);
+
     }
     renderMovies();
 })
