@@ -33,14 +33,17 @@ function renderMovies() {
     });
 }
 renderMovies();
+
+
 addMovie.addEventListener('click', () => {
-    const movieName = movieName.value
-    const moviePoster = moviePoster.value
-    if (movieName === "" || moviePoster === "") {
+    const Name = movieName.value.trim()
+    const Poster = moviePoster.value.trim()
+    if (Name === "" || Poster === "") {
         return
     } else {
-        movieTitles.push(movieName);
-        moviePosters.push(moviePoster);
+        movieTitles.push(Name);
+        moviePosters.push(Poster);
     }
+    renderMovies();
 })
 
