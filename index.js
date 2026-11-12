@@ -32,6 +32,7 @@ function renderMovies() {
         movieList.append(item);
     });
 }
+renderMovies();
 addMovie.addEventListener('click', () => {
     const movieName = movieName.value
     const moviePoster = moviePoster.value
@@ -43,4 +44,3 @@ addMovie.addEventListener('click', () => {
     }
 })
 
-renderMovies();
