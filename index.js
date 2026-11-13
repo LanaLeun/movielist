@@ -56,8 +56,8 @@ addMovie.addEventListener('click', () => {
     } else {
         movieTitles.push(Name);
         moviePosters.push(Poster);
-        movieName.innerHTML = ""
-        moviePoster.innerHTML = ""
+        movieName.value = "";
+        moviePoster.value = "";
     }
     renderMovies();
 })
