@@ -19,17 +19,21 @@ function renderMovies() {
 
     movieTitles.forEach((movieTitle, index) => {
         const item = document.createElement('li');
+        item.className = "i"
 
         const poster = document.createElement('img');
         poster.src = moviePosters[index];
         poster.alt = '';
         poster.width = 64;
+        poster.className = "p"
 
         const title = document.createElement('span');
         title.textContent = movieTitle;
+        title.className = "t"
 
         const delet = document.createElement('button');
         delet.textContent = "Удалить";
+        delet.className = "d"
 
         item.append(poster, title, delet);
         movieList.append(item);
